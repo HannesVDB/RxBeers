@@ -1,0 +1,6 @@
+framework module Pods_RxBeers {
+  umbrella header "Pods-RxBeers-umbrella.h"
+
+  export *
+  module * { export * }
+}

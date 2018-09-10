@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="BeerTableViewCell" customModule="RxBeers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="560" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="560" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-RB-BKB">
+                        <rect key="frame" x="20" y="50" width="99.5" height="99.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="BwO-RB-BKB" secondAttribute="height" id="wLv-Au-nNm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roF-E7-gDl">
+                        <rect key="frame" x="127" y="50" width="405" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwI-6I-Uc5">
+                        <rect key="frame" x="127" y="79" width="405" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QwI-6I-Uc5" firstAttribute="trailing" secondItem="roF-E7-gDl" secondAttribute="trailing" id="341-S0-Uwp"/>
+                    <constraint firstItem="roF-E7-gDl" firstAttribute="top" secondItem="BwO-RB-BKB" secondAttribute="top" id="36i-21-kkV"/>
+                    <constraint firstItem="roF-E7-gDl" firstAttribute="leading" secondItem="BwO-RB-BKB" secondAttribute="trailing" constant="8" id="AZb-d1-sqa"/>
+                    <constraint firstItem="BwO-RB-BKB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HIw-Cc-kvl"/>
+                    <constraint firstItem="BwO-RB-BKB" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:2" id="UTU-2Q-aCz"/>
+                    <constraint firstItem="BwO-RB-BKB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ZLR-tE-39z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="roF-E7-gDl" secondAttribute="trailing" constant="8" id="e1v-U7-3PO"/>
+                    <constraint firstItem="QwI-6I-Uc5" firstAttribute="leading" secondItem="roF-E7-gDl" secondAttribute="leading" id="nqh-68-iOa"/>
+                    <constraint firstItem="QwI-6I-Uc5" firstAttribute="top" secondItem="roF-E7-gDl" secondAttribute="bottom" constant="8" id="t0s-Zg-ILc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="beerImageView" destination="BwO-RB-BKB" id="EdH-Ks-OR6"/>
+                <outlet property="beerLabel" destination="roF-E7-gDl" id="Wfy-n5-g9G"/>
+                <outlet property="descriptionLabel" destination="QwI-6I-Uc5" id="rrJ-5d-2q8"/>
+            </connections>
+            <point key="canvasLocation" x="-68" y="26"/>
+        </tableViewCell>
+    </objects>
+</document>
