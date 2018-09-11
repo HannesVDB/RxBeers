@@ -17,14 +17,15 @@ struct BeersViewModel: InOutViewModel {
 
     private let disposeBag = DisposeBag()
     private let beersSubject = BehaviorSubject<[Beer]>(value: [])
+    private let selectedIndexPathSubject = PublishSubject<IndexPath>()
+    private let selectedBeerSubject = PublishSubject<Beer>()
 
     init() {
 
-        self.in = In()
-        self.out = Out(beers: beersSubject.asObserver())
+        self.in = In(selectedIndexPath: selectedIndexPathSubject.asObserver())
+        self.out = Out(beers: beersSubject.asObservable(), selectedBeer: selectedBeerSubject.asObservable())
 
-        Observable
-            .create { observer in
+        let beers: Observable<[Beer]> = Observable.create { observer in
                 let request = BeersRequest()
                 let serializer = JSONSerializer<[Beer]>()
 
@@ -39,7 +40,17 @@ struct BeersViewModel: InOutViewModel {
 
                 return Disposables.create()
             }
+
+        beers
             .subscribe(beersSubject)
+            .disposed(by: disposeBag)
+
+        Observable
+            .combineLatest(beers, selectedIndexPathSubject.asObservable())
+            .map { someBeers, indexPath in
+                return someBeers[indexPath.row]
+            }
+            .subscribe(selectedBeerSubject)
             .disposed(by: disposeBag)
     }
     
@@ -48,11 +59,12 @@ struct BeersViewModel: InOutViewModel {
 extension BeersViewModel {
 
     struct In {
-
+        let selectedIndexPath: AnyObserver<IndexPath>
     }
 
     struct Out {
         let beers: Observable<[Beer]>
+        let selectedBeer: Observable<Beer>
     }
 
 }

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06B42660B168D9DB3DA81314C98FCBE7"
+               BlueprintIdentifier = "A33E0AAE8B9086726023EC599D846666"
                BlueprintName = "Stella"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Stella.framework">

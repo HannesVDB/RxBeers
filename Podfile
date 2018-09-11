@@ -8,6 +8,7 @@ target 'RxBeers' do
   # Pods for RxBeers
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'RxOptional', '~> 3.4'
 
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireActivityLogger', '~> 2.4'
