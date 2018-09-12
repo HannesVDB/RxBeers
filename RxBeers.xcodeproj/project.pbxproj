@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3982D4571E19B1C1E680D33C /* Pods_RxBeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC896973D0ACD3EF32AC825 /* Pods_RxBeersTests.framework */; };
+		840DA0B82148EEF8007B2BA1 /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DA0B72148EEF8007B2BA1 /* LoginViewModelSpec.swift */; };
+		840DA0BA2148EFC1007B2BA1 /* BeerDetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DA0B92148EFC1007B2BA1 /* BeerDetailViewModelSpec.swift */; };
 		841B91962146599E00E797C2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B91952146599E00E797C2 /* Beer.swift */; };
 		841B9198214659EE00E797C2 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B9197214659EE00E797C2 /* Brewery.swift */; };
 		841B919A21465ACB00E797C2 /* BeersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B919921465ACB00E797C2 /* BeersRequest.swift */; };
@@ -57,6 +59,8 @@
 		3A6FE08A9767FCC95187900C /* Pods-RxBeersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxBeersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxBeersTests/Pods-RxBeersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42504F3A90C23BDE87A3425E /* Pods-RxBeers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxBeers.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxBeers/Pods-RxBeers.release.xcconfig"; sourceTree = "<group>"; };
 		5CC896973D0ACD3EF32AC825 /* Pods_RxBeersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxBeersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840DA0B72148EEF8007B2BA1 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
+		840DA0B92148EFC1007B2BA1 /* BeerDetailViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewModelSpec.swift; sourceTree = "<group>"; };
 		841B91952146599E00E797C2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		841B9197214659EE00E797C2 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		841B919921465ACB00E797C2 /* BeersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRequest.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			children = (
 				84610502214653A50028AAF8 /* RxBeersTests.swift */,
 				84610504214653A50028AAF8 /* Info.plist */,
+				840DA0B72148EEF8007B2BA1 /* LoginViewModelSpec.swift */,
+				840DA0B92148EFC1007B2BA1 /* BeerDetailViewModelSpec.swift */,
 			);
 			path = RxBeersTests;
 			sourceTree = "<group>";
@@ -464,13 +470,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxBeersTests/Pods-RxBeersTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -577,7 +589,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840DA0BA2148EFC1007B2BA1 /* BeerDetailViewModelSpec.swift in Sources */,
 				84610503214653A50028AAF8 /* RxBeersTests.swift in Sources */,
+				840DA0B82148EEF8007B2BA1 /* LoginViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

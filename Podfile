@@ -24,6 +24,8 @@ target 'RxBeers' do
 
     pod 'Quick', '~> 1.3'
     pod 'Nimble', '~> 7.1'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
     
   end
 
