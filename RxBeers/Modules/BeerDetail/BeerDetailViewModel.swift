@@ -23,6 +23,8 @@ struct BeerDetailViewModel: InOutViewModel {
 
         let imageUrl = URL(string: input.beer.imageUrl)
 
+
+
         self.in = In()
         self.out = Out(screenName: Observable.just(input.beer.name),
                        beerTitle: Observable.just(input.beer.name),

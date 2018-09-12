@@ -21,6 +21,10 @@ target 'RxBeers' do
   target 'RxBeersTests' do
     inherit! :search_paths
     # Pods for testing
+
+    pod 'Quick', '~> 1.3'
+    pod 'Nimble', '~> 7.1'
+    
   end
 
 end
