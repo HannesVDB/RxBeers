@@ -16,4 +16,5 @@ protocol InOutViewModel: ViewModel {
 
     var `in`: In { get }
     var out: Out { get }
+    
 }
